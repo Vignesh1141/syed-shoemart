@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Shoemart</title>
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel='stylesheet'href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+</head>
+<body>
+    <div class="container">
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>SYED SHOEMART</h2>
+        <ul class="navlinks">
+            <li><a class="activate" href="home.html">Home</a></li>
+            <li><a href="slippers.html">Slippers</a></li>
+            <li><a href="shoes.html">Shoes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-bar" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars menu_icon"></i>
+        </div>
+    </div>
+
+    <!-- Home-Banner -->
+    <div class="banner-details">
+        <div class="banner-content">
+            <h2>Big Sale is Here...🔥</h2>
+            <p>Get up to 30% OFF on all products. <br>
+            Don't miss out on this limited-time offer.</p>
+            <a href="offers.html" class="explore">Explore Now</a>
+        </div>
+        <div class="banner-image">
+            <img src="Images/shoe.png" alt="" width="500px">
+        </div>
+    </div>
+    
+    <!-- About-Us -->
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p><strong>Syed Shoemart</strong>, we are dedicated to providing high-quality footwear that blends style, comfort, and durability. With a wide range of collections for <strong>Men, Women</strong> and <strong>children</strong> we ensure that every customer finds the perfect pair for any occasion.</p>
+     </div>
+
+    <!-- Home-Product-Containner -->
+    <div class="cards-container">
+        <!-- Card-1 -->
+        <div class="pro-card">
+            <img src="Images/card-1.png" alt="">
+            <h3>Men's Daily Wear</h3>
+            <div class="color-options">
+                <div class="color-circle" style="background: #924939;"></div>
+                <div class="color-circle" style="background: #818471;"></div>
+                <div class="color-circle" style="background: #7FA6BD;"></div>
+            </div>
+            <p class="price">₹ 419.00</p>
+        </div>
+        <!-- Card-2 -->
+        <div class="pro-card">
+            <img src="Images/card-2.png" alt="">
+            <h3>Men's Walking Shoe</h3>
+            <div class="color-options">
+                <div class="color-circle" style="background: #7FA6BD;"></div>
+                <div class="color-circle" style="background: #5E6064;"></div>
+                <div class="color-circle" style="background: black;"></div>
+            </div>
+            <p class="price">₹ 1,099.00</p>
+        </div>
+        <!-- Card-3 -->
+        <div class="pro-card">
+            <img src="Images/card-3.png" alt="">
+            <h3>Women's Daily Wear</h3>
+            <div class="color-options">
+                <div class="color-circle" style="background: #4C3B45;"></div>
+                <div class="color-circle" style="background: #555865;"></div>
+                <div class="color-circle" style="background: #A14056;"></div>
+            </div>
+            <p class="price">₹ 329.00</p>
+        </div>
+        <!-- Card-4 -->
+        <div class="pro-card">
+            <img src="Images/card-4.png" alt="">
+            <h3>Women's Sandals</h3>
+            <div class="color-options">
+                <div class="color-circle" style="background: #A14056;"></div>
+                <div class="color-circle" style="background: #555865;"></div>
+                <div class="color-circle" style="background: #4C3B45;"></div>
+            </div>
+            <p class="price">₹ 359.00</p>
+        </div>
+    </div>
+
+    <!-- Gallery-Images -->
+    <div class="gallery">
+        <h2>Gallery</h2>
+        <div class="image-gallery">
+             <div class="arr left" onclick="toggleRow()">&#10094;</div>
+             <div class="arr right" onclick="toggleRow()">&#10095;</div>
+             <div class="row1 active">
+                 <img src="Images/image-1.png" alt="">
+                 <img src="Images/image-2.png" alt="">
+                 <img src="Images/image-5.png" alt="">
+                 <img src="Images/image-6.png" alt="">
+                 <img src="Images/image-3.png" alt="">
+                 <img src="Images/image-4.png" alt="">
+             </div>
+             <div class="row2">
+                 <img src="Images/image-10.png" alt="">
+                 <img src="Images/image-7.png" alt="">
+                 <img src="Images/image-8.png" alt="">
+                 <img src="Images/image-9.png" alt="">
+                 <img src="Images/image-11.png" alt="">
+                 <img src="Images/image-12.png" alt="">
+             </div>
+        </div>
+     </div>
+
+    <!-- Brand-details -->
+    <div class="brand-details">
+        <div class="brand-image">
+            <img src="Images/brand-1.png" alt="">
+        </div>
+        <div class="brand-content">
+            <div class="brand-name">
+                <h2>WALKAROO</h2>
+                <p>A Highly Responsive and Lightweight Midsole Material designed for Max Energy Return and Bounce-Back</p>
+            </div>
+            <div class="brand-color">
+                <div class="color-circle" style="background: #333333;"></div>
+                <div class="color-circle" style="background: #4b658d;"></div>
+                <div class="color-circle" style="background: #000000;"></div>
+            </div>
+            <div class="brand-size">
+                <div class="size-box">7</div>
+                <div class="size-box active">8</div>
+                <div class="size-box">9</div>
+                <div class="size-box">10</div>
+            </div>
+            <div class="brand-price">
+                <p>₹ 399.00 /-</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="company">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="slippers.html">Slippers</a></li>
+                    <li><a href="shoes.html">Shoes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <h4>ADDRESS</h4>
+                <p>Mohmmed Faizel</p>
+                <p>Main Bazzar,</p>
+                <p>Elumali-625535.</p>
+                <p>Phn: 9677910723</p>
+            </div>
+            <div class="social-media">
+                <h4>FOLLOW US</h4>
+                <ul>
+                    <li><i class="fa-regular fa-envelope"></i></li>
+                    <li><i class="fa-brands fa-whatsapp"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-rights">
+            <p>@2025 Syed Shoemart. All Rights Reserved</p>
+        </div>
+     </footer>
+
+     </div>
+
+    <script src="JS/home.js"></script>
+
+</body>
+</html>

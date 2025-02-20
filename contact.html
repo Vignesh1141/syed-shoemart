@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Shoemart</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel='stylesheet'href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+</head>
+<body>
+    <div class="container">
+
+    <!-- Navbar -->
+    <div class="navbar">
+            <h2>SYED SHOEMART</h2>
+            <ul class="navlinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="slippers.html">Slippers</a></li>
+                <li><a href="shoes.html">Shoes</a></li>
+                <li><a class="activate" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-bar" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars menu_icon"></i>
+            </div>
+    </div>
+
+    <!-- Form-Details -->
+    <div class="form-details">
+        <div class="form-image">
+            <img src="Images/form-image.jpg" alt="">
+        </div>
+        <div class="form-section">
+            <h2>CONTACT US</h2>
+            <form action="mail.php">
+                <div class="form-row column">
+                    <div class="input-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" placeholder="Your First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Your Last Name" required>
+                    </div>
+                </div>
+                <div class="form-row column">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your Mail Id" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" placeholder="+91 " required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Tell Something" rows="5" required></textarea>
+                </div>
+                
+                <button><i class="fa-regular fa-paper-plane"></i> Send</button>
+            
+            </form>
+        </div>
+    </div>
+
+    <!-- Get-in-Touch -->
+    <div class="get-touch">
+        <h2>Get in Touch</h2>
+        <p>Have a question or need assistance? We’d love to hear from you!
+        Feel free to reach out, and we'll get back to you as soon as possible</p>
+    </div>
+
+    <!-- Info-Details -->
+    <div class="info-details">
+        <div class="info-section">
+            <div class="logo"><i class="fa-solid fa-address-card"></i></div>
+            <div class="info-content">
+                <h3>About</h3>
+                <p>Mohmmed Faizel</p>
+                <p>9677910723</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="logo"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-content">
+                <h3>Address</h3>
+                <p>Main Bazzar,</p>
+                <p>Elumalai-625535</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="logo"><i class="fa-solid fa-user-plus"></i></div>
+            <div class="info-content">
+                <h3>Follow</h3>
+                <p><a href="#"><i class="fa-brands fa-whatsapp"></i>    WhatsApp</a></p>
+                <p><a href="#"><i class="fa-brands fa-instagram"></i>   Instagram</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-rights">
+        <p>@2025 Syed Shoemart. All Rights Reserved</p>
+    </div>
+
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navlinks").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
