@@ -1,7 +1,9 @@
+/* Navbar for all Pages */
 function toggleMenu() {
     document.querySelector(".navlinks").classList.toggle("active");
 }
 
+/* Home-Page Gallery Slider */
 function toggleRow() {
     const row1 = document.querySelector('.row1');
     const row2 = document.querySelector('.row2');
@@ -15,3 +17,10 @@ function toggleRow() {
         row1.classList.add('active');
     }
 }
+
+/* Slippers-Page and Shoes-Page Heart selection */
+document.querySelectorAll('.pro-heart').forEach(heart => {
+    heart.addEventListener('click', function() {
+        this.querySelector('i').classList.toggle('active');
+    });
+});

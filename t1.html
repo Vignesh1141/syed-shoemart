@@ -3,161 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Responsive Product Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel='stylesheet'href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
     <style>
-        /* General Styles */
-        body {
+        :root {
+            --price-color: #e63946;
+            --bg-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+        }
+
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pro-odd, .pro-even {
+            height: 260px;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
-
-        /* Container */
-        .container {
-            display: flex;
-            width: 800px;
-            background: white;
+            position: relative;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
+            transition: 0.3s;
+            text-align: center;
         }
 
-        /* Form Section */
-        .form-section {
-            padding: 20px;
-            width: 50%;
+        .pro-odd {
+            background: #9cd6ea;
         }
 
-        .form-section h2 {
-            margin-bottom: 10px;
+        .pro-even {
+            background: #FFE8DF;
         }
 
-        .row {
-            display: flex;
-            gap: 10px;
+        .pro-odd img, .pro-even img {
+            width: 200px;
         }
 
-        .input-group {
-            flex: 1;
-            margin-bottom: 10px;
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        textarea {
-            resize: none;
-        }
-
-        /* Button */
-        button {
-            width: 100%;
-            background: #007bff;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
+        .pro-heart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: 0.3s;
         }
 
-        button:hover {
-            background: #0056b3;
+        .pro-heart i.active {
+            color: var(--price-color);
         }
 
-        /* Image Section */
-        .image-section {
-            width: 50%;
-        }
-
-        .image-section img {
-            width: 100%;
+        .pro-brand {
+            position: absolute;
+            left: 0;
             height: 100%;
-            object-fit: cover;
+            background: black;
+            color: var(--bg-color);
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            opacity: 0;
+            transition: 0.5s;
         }
 
-        /* Responsive */
+        .pro-odd:hover .pro-brand, 
+        .pro-even:hover .pro-brand {
+            opacity: 1;
+        }
+
+        .pro-name {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+            bottom: 50px;
+        }
+
+        .pro-price {
+            font-weight: bold;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #6c757d;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .new-price {
+            color: var(--price-color);
+            font-size: 18px;
+        }
+
+        /* Responsive: 2 products per row on tablets & mobile */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-            }
-
-            .form-section, .image-section {
-                width: 100%;
-            }
-
-            .row {
-                flex-direction: column;
-            }
-
-            .image-section img {
-                height: 200px;
+            .pro-odd, .pro-even {
+                width: calc(50% - 20px); /* 2 products per row */
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Form Section -->
-        <div class="form-section">
-            <h2>Contact Us</h2>
-            <form action="sendmail.php" method="POST">
-                <div class="row">
-                    <div class="input-group">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="fname" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lname" required>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
+    <div class="product-details"> 
+        <div class="pro-odd">
+            <div class="pro-brand">Slipper</div>
+            <div class="pro-heart"><i class="fa-regular fa-heart"></i></div>
+            <div class="pro-image"><img src="Images/pro-1.png" alt="Product"></div>
+            <div class="pro-name">Sandel World</div>
+            <div class="pro-price">
+                <span class="old-price">₹ 419.00</span>
+                <span class="new-price">₹ 349.00</span>
+            </div>
         </div>
-
-        <!-- Image Section -->
-        <div class="image-section">
-            <img src="contact-image.jpg" alt="Contact Image">
+        <div class="pro-even">
+            <div class="pro-brand">Slipper</div>
+            <div class="pro-heart"><i class="fa-regular fa-heart"></i></div>
+            <div class="pro-image"><img src="Images/pro-1.png" alt="Product"></div>
+            <div class="pro-name">Sandel World</div>
+            <div class="pro-price">
+                <span class="old-price">₹ 419.00</span>
+                <span class="new-price">₹ 349.00</span>
+            </div>
+        </div>
+        <div class="pro-odd">
+            <div class="pro-brand">Slipper</div>
+            <div class="pro-heart"><i class="fa-regular fa-heart"></i></div>
+            <div class="pro-image"><img src="Images/pro-1.png" alt="Product"></div>
+            <div class="pro-name">Sandel World</div>
+            <div class="pro-price">
+                <span class="old-price">₹ 419.00</span>
+                <span class="new-price">₹ 349.00</span>
+            </div>
+        </div>
+        <div class="pro-even">
+            <div class="pro-brand">Slipper</div>
+            <div class="pro-heart"><i class="fa-regular fa-heart"></i></div>
+            <div class="pro-image"><img src="Images/pro-1.png" alt="Product"></div>
+            <div class="pro-name">Sandel World</div>
+            <div class="pro-price">
+                <span class="old-price">₹ 419.00</span>
+                <span class="new-price">₹ 349.00</span>
+            </div>
+        </div>
+        <div class="pro-odd">
+            <div class="pro-brand">Slipper</div>
+            <div class="pro-heart"><i class="fa-regular fa-heart"></i></div>
+            <div class="pro-image"><img src="Images/pro-1.png" alt="Product"></div>
+            <div class="pro-name">Sandel World</div>
+            <div class="pro-price">
+                <span class="old-price">₹ 419.00</span>
+                <span class="new-price">₹ 349.00</span>
+            </div>
+        </div>
+        <div class="pro-even">
+            <div class="pro-brand">Slipper</div>
+            <div class="pro-heart"><i class="fa-regular fa-heart"></i></div>
+            <div class="pro-image"><img src="Images/pro-1.png" alt="Product"></div>
+            <div class="pro-name">Sandel World</div>
+            <div class="pro-price">
+                <span class="old-price">₹ 419.00</span>
+                <span class="new-price">₹ 349.00</span>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.pro-heart').forEach(heart => {
+            heart.addEventListener('click', function() {
+                this.querySelector('i').classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

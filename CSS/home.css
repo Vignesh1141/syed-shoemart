@@ -16,10 +16,8 @@
     --secondary-color: #6c757d; 
     --text-color: #333333; 
     --price-color: #ff0000;
-
-  }
+}
   
-
 body{
     background-color: var(--bg-color)
 }
@@ -67,12 +65,10 @@ body{
 .menu-bar{
     display: none;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
     color: var(--main-text);
 }
 
-/*Banner*/
+/* Banner */
 
 .banner-details{
     display: flex;
@@ -81,9 +77,9 @@ body{
     background: url('bg.jpg') no-repeat center center;
     background-size: cover;
     margin: auto;
-    width: 100%;
+    width: 96%;
     max-width: 1400px;
-    height: 500px;
+    height: 460px;
     padding: 40px;
     margin-top: 20px;
     border-radius: 10px;
@@ -91,13 +87,13 @@ body{
 
 .banner-content{
     width: 50%;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 .banner-content h2{
     color:var(--bg-color);
     font-weight: bold;
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
@@ -128,8 +124,7 @@ body{
 .banner-image img{
     width: 100%;
     height: auto;
-    max-width: 560px;
-    
+    max-width: 500px; 
 }
 
 .banner-image{
@@ -143,7 +138,7 @@ body{
     100%{transform: scale(1);}
 }
 
-/*About-Us*/
+/* About-Us */
 
 .about-us{
     display: flex;
@@ -164,18 +159,17 @@ body{
     margin: 20px;
     font-size: 24px;
     font-weight: 600;
-    border-bottom: 2px solid #b08705;
 }
 
 .about-us p{
     font-size: 18px;
     width: 100%;
     max-width: 1200px;
-    line-height: 1.6;
+    line-height: 2;
     padding: 0 20px 20px;
 }
 
-/*Card-Container*/
+/* Card-Container */
 
 .cards-container{
     display: flex;
@@ -223,6 +217,7 @@ body{
 .pro-card h3{
     margin: 15px 0;
     font-size: 18px;
+    font-weight: bold;
     color: var(--main-color);
 }
 
@@ -237,7 +232,6 @@ body{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px;
     cursor: pointer;
 }
 
@@ -248,8 +242,7 @@ body{
     margin: 10px 0;
 }
 
-/*Gallery*/
-
+/* Gallery */
 
 .gallery{
     margin-top: 30px;
@@ -260,7 +253,6 @@ body{
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 2px solid #b08705;
     color: var(--main-text);
 }
 
@@ -319,7 +311,7 @@ body{
     right: 10px;
 }
 
-/*Brand-Details*/
+/* Brand-Details */
 
 .brand-details{
     max-width: 1000px;
@@ -328,7 +320,6 @@ body{
     align-items: center;
     border: 2px solid #0182C4;
     border-radius: 10px;
-    margin-top: 20px auto;
     overflow: hidden;
     margin: 20px auto;
 }
@@ -361,7 +352,8 @@ body{
 
 .brand-content p{
     font-size: 14px;
-    color: var(--secondary-color);
+    font-weight: 300;
+    color: var(--text-color);
     margin-top: 10px;
 }
 
@@ -433,10 +425,12 @@ body{
     color:var(--bg-color);
     margin-top: 8px;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .address p{
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .social-media{
@@ -481,7 +475,7 @@ body{
 
 @media (max-width: 768px) {
 
-    /*Navbar*/
+    /* Navbar */
 
     .navlinks {
         display: none;
@@ -510,9 +504,10 @@ body{
     .menu-bar {
         display: flex;
         align-items: center;
+        font-size: 20px;
     }
 
-    /*Banner*/
+    /* Banner */
 
     .banner-details {
         flex-direction: column;
@@ -522,37 +517,45 @@ body{
 
     .banner-content, 
     .banner-image {
-        width: 100%;
+        width: 90%;
     }
 
     .banner-image{
         text-align: center;
-        margin-top: 20px;
     }
 
     .banner-content h2 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
-    .banner_content p{
-        font-size: 18px;
+    .banner-content p{
+        font-size: 14px;
     }
 
-    /*About-Us*/
+    .explore{
+        font-size: 12px;
+    }
+
+    /* About-Us */
 
     .about-us p {
         font-size: 16px;
         padding: 0 15px 15px;
     }
 
-    /*Card-Container*/
+    /* Card-Container */
 
     .cards-container {
         flex-direction: column;
         align-items: center;
     }
 
-    /*Slide-Content*/
+    .pro-card h3{
+        font-size: 16px;
+    }
+
+
+    /* Slide-Content */
 
     .image-gallery img{
         max-width: 150px;
@@ -563,15 +566,15 @@ body{
         padding: 8px;
     }
 
-    /*Brand-Details*/
+    /* Brand-Details */
 
     .brand-details {
         flex-direction: column;
         text-align: center;
         align-items: center;
         justify-content: center;
+        width: 90%;
         height: auto;
-        
     }
 
     .brand-image {
@@ -592,6 +595,14 @@ body{
         flex-direction: column;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .footer-content h4{
+        margin-top: 10px;
+    }
+
+    .address p{
+        line-height: 1.5;
     }
 }
 
